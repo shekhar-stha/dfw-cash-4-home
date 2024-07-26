@@ -1,0 +1,100 @@
+// Slick
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+
+    li {
+        margin: 0 0.25rem;
+
+        button {
+            display: block;
+            width: 0.8rem;
+            height: 0.8rem;
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            background-color: #c4c4c4;
+            text-indent: -9999px;
+        }
+    }
+
+    li.slick-active button {
+        background-color: $primary;
+        ;
+        width: 2rem;
+        border-radius: 20px;
+    }
+
+    .slick-active {
+        margin-right: 1rem;
+    }
+}
+
+.slick-slide {
+    margin: 0 20px;
+
+    @media (max-width: 575.98px) {
+        margin: 0 12px;
+    }
+}
+
+.slick-list {
+    margin: 0 -20px;
+
+    @media (max-width: 575.98px) {
+        margin: 0 -12px;
+    }
+}
+
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $primary;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.left-arrow {
+    left: -30px;
+
+    @media (max-width: 768px) {
+        left: -5px;
+    }
+}
+
+.right-arrow {
+    right: -30px;
+
+    @media (max-width: 768px) {
+        right: -5px;
+    }
+}
+
+
+// .ministries {
+
+//     .slick-dots li {
+//         display: none
+//     }
+
+//     .slick-dots li.slick-active,
+//     .slick-dots li.slick-active+li,
+//     .slick-dots li.slick-active+li+li,
+//     .slick-dots li.slick-active+li+li+li,
+//     .slick-dots li.slick-active+li+li+li+li {
+//         display: block;
+//     }
+// }

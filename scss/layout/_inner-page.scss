@@ -1,0 +1,24 @@
+.details {
+    .part {
+        margin-bottom: 2rem;
+
+        h3 {
+            font-size: 27px;
+            font-weight: 600;
+            color: $dark;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            text-align: justify;
+        }
+
+        ul {
+            li {
+                margin-bottom: 0.2rem;
+            }
+        }
+    }
+}

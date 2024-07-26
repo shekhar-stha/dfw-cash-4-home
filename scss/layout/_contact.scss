@@ -1,0 +1,322 @@
+.contact-bars {
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        min-height: 15rem;
+        gap: 0;
+        border-radius: 12px;
+        overflow: hidden !important;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // background-color: $primary;
+            padding: 2rem 1rem;
+
+            &:nth-of-type(even) {
+                background-color: #d61c1c;
+            }
+
+            &:nth-of-type(odd) {
+                background-color: $primary;
+            }
+
+
+            @media (max-width: 992px) and (min-width: 576px) {
+                border-bottom: 1px solid #a1a1a1;
+            }
+
+            .icon-div {
+                font-size: 3rem;
+                color: $white;
+            }
+
+            .title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: $white;
+                margin-bottom: 1.4rem;
+            }
+
+            p,
+            a {
+                font-size: 1rem;
+                color: $white;
+                text-align: center;
+                margin-bottom: 0.5rem;
+
+                i {
+                    margin-right: 0.2rem;
+                }
+            }
+        }
+
+    }
+}
+
+
+.contact-section {
+    background-color: #f8f8f8;
+
+    &__img {
+        position: relative;
+        width: 100%;
+
+        img {
+            width: 100%;
+            max-height: 306px;
+            min-height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    &__row {
+        --bs-gutter-x: 2.5rem;
+
+        //   @include media-breakpoint-down(lg) {
+        //     --bs-gutter-y: 2rem;
+        //   }
+    }
+
+    //   OVERLAY
+    &__main-text {
+        margin: 2rem;
+    }
+
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: #fff;
+        font-size: 64px;
+        line-height: 96px;
+        letter-spacing: 0.25px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: fit-content;
+        white-space: nowrap;
+
+        @media (max-width: 1200px) {
+            font-size: 52px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 33px;
+        }
+    }
+
+    &__primary-title {
+        margin: 1.875rem 0 1.25rem 0;
+        line-height: 45px;
+        color: #3d5a80;
+
+        @media (max-width: 992px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 18px;
+        }
+    }
+
+    &__contact-details {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.625rem;
+
+        @media (max-width: 576px) {
+            margin-top: 0.75rem;
+        }
+
+        .details {
+            text-align: center;
+
+            a {
+                color: #808080;
+            }
+
+            & span {
+                display: block;
+                padding-bottom: 10px;
+            }
+
+            &__text {
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: 600;
+            }
+
+            &__address {
+                width: 169px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 28px;
+                color: #808080;
+
+                @media (max-width: 992px) {
+                    width: auto;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 420px;
+        margin-top: 2rem;
+
+        @media (max-width: 576px) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__form {
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        padding: 35px 35px;
+        background: #fff;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            margin-top: 1.5rem;
+            padding: 20px;
+        }
+    }
+}
+
+// RIGHT SIDE FORM
+.contact-form-right {
+    &__form-title {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        color: #3d5a80;
+    }
+
+    &__row {
+        margin-top: 15px;
+
+        @media (max-width: 992px) {
+            margin-top: 0px;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        color: #808080;
+
+        @media (max-width: 1200px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 992px) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.red-star {
+    color: #f44336;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    &::placeholder {
+        color: #c4c4c4 !important;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: #c4c4c4 !important;
+    }
+
+    &::-ms-input-placeholder {
+        color: #c4c4c4 !important;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 0.8rem;
+    }
+}
+
+.contact-form-btn {
+    // background-color: $secondary;
+    border-radius: 10px;
+    color: #fff;
+    padding: 1rem;
+    transition: 0.2s ease all;
+
+    &:hover {
+        background-color: #fff;
+        border: 1px solid $secondary;
+        color: $secondary;
+    }
+}
+
+.contact-icons{
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+
+    .column{
+        margin: 0 0.5rem;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+        padding: 7px 20px 7px 10px;
+        border-radius: 2rem;
+
+        .icon-div{
+            background-color: $secondary;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                font-size: 24px;
+                color: $white;
+            }
+        }
+
+        p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}

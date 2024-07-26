@@ -1,0 +1,51 @@
+.mass-reviews{
+    overflow: visible !important;
+    overflow-x: hidden;
+    .review{
+        // background-color: #fcf9e7;
+        background-color: $white;
+        padding: 6rem 1rem 3rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin: 1rem 0 4rem;
+        position: relative;
+        .comment{
+            font-size: 17px;
+            font-weight: 500;
+            color: $info;
+            margin-bottom: 1rem;
+            padding: 0 2rem;
+        }
+
+        .name{
+            font-weight: 500;
+            color: $info;
+        }
+
+        .quote{
+            width: 8rem;
+            object-fit: contain;
+            position: absolute;
+            top: -20%;
+
+            @media (max-width: 576px) {
+                width: 6rem;
+                top: -10%;
+            }
+        }
+
+        &:nth-child(odd){
+            .quote{
+                left: 5%;
+                transform: scale(-1);
+            }
+        }
+
+        &:nth-child(even){
+            .quote{
+                right: 5%;
+            }
+        }
+    }
+}

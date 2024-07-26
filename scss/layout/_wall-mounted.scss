@@ -1,0 +1,53 @@
+.brief-description{
+    .flex{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 4rem;
+
+        .unit{
+            width: 100%;
+
+            .img-div{
+                width: 100%;
+                margin-bottom: 2rem;
+                img{
+                    width: 90%;
+                    max-height: 280px;
+                    object-fit: contain;
+                }
+            }
+
+            table{
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin: 2rem 0;
+                border-radius: 12px;
+                overflow: hidden;
+                border: none;
+                padding: 1rem 0.8rem;
+                tr,td, th, thead, tbody{
+                    border: none;
+                }
+                th{
+                    border-bottom: 1px solid $info;
+                    font-weight: 600;
+                    color: $warning;
+                    width: fit-content;
+                }
+                td{
+                    font-weight: 500;
+                    border-bottom: 1px solid $info;
+                    border-left: none !important;
+                }
+                th,td{
+                    padding: 1rem;
+                }
+            }
+
+            ul{
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,104 @@
+.top-information-main {
+    background-color: $white;
+}
+
+nav {
+    width: 100%;
+    height: fit-content;
+    background-color: $white;
+    padding: 1rem 0 !important;
+
+
+
+    @media (max-width: 1200px) {
+        padding: 16px 0;
+        background: none;
+        background-color: $white;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+
+        div {
+            gap: 1rem;
+        }
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+
+        .nav-link {
+            color: $dark;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: capitalize;
+            border-bottom: 4px solid transparent;
+            transition: all 0.7s;
+
+            @media (max-width: 1400px) {
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                border-bottom: 4px solid $primary;
+            }
+
+            @media (max-width: 1400px) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 1200px) {
+                color: $dark;
+                text-align: center;
+            }
+        }
+    }
+
+    .nav-cta-div {
+        .nav-cta {
+            display: flex;
+            justify-content: center;
+            background-color: $primary;
+            height: auto;
+            min-width: 15rem;
+            padding: 1rem 0;
+            border-radius: 4px;
+            // width: fit-content;
+            color: $white;
+            font-weight: 600;
+            transition: all 0.4s;
+
+
+            &:hover {
+                color: $primary;
+                background-color: transparent;
+                border: 2px solid $primary;
+                transform: scale(1.01);
+            }
+
+            @media (min-width: 1200px) {
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 14rem;
+    z-index: 10;
+    position: relative;
+
+    @media (max-width: 1400px) {
+        width: 10rem;
+    }
+
+    @media (max-width: 1200px) {
+        width: 10rem;
+        max-width: 10rem;
+        z-index: inherit;
+        margin-top: 0;
+    }
+}
