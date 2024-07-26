@@ -3266,7 +3266,7 @@ textarea.form-control-lg {
 .btn-outline-primary {
   --bs-btn-color: #599e55;
   --bs-btn-border-color: #599e55;
-  --bs-btn-hover-color: #302c2c;
+  --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #599e55;
   --bs-btn-hover-border-color: #599e55;
   --bs-btn-focus-shadow-rgb: 89, 158, 85;
@@ -12864,27 +12864,31 @@ p {
 .btn-primary {
   color: #fcfef7;
   font-weight: 500;
-  border: 2px solid transparent;
   background-color: #599e55;
+  text-shadow: 0 0 7px #3e733b;
+  transition: none !important;
+}
+.btn-primary.btn-form {
+	background: linear-gradient(0deg, rgba(62,115,59,1) 0%, rgba(89,158,85,1) 100%);
 }
 .btn-primary:hover {
-  color: #599e55;
-  background-color: transparent;
-  border: 2px solid #599e55;
-  transform: scale(1.01);
+  color: #fff;
+  background: linear-gradient(0deg, rgba(62,115,59,1) 0%, rgba(89,158,85,1) 100%);
+  text-shadow: 0 0 5px #3e733b;
+  transition: none !important;
 }
-
+.btn-primary.btn-form:hover {
+	background: linear-gradient(0deg, rgba(52,105,49,1) 0%, rgba(79,148,75,1) 100%);
+}
 .btn-secondary {
   color: #fcfef7;
   font-weight: 500;
   border: 2px solid #182a45;
-  transition: all 0.3s;
+  transition: none !important;
 }
 .btn-secondary:hover {
-  color: #182a45;
-  background-color: transparent;
+  color: #fff;
   border: 2px solid #182a45;
-  transform: scale(1.04);
 }
 
 .btn-outline-secondary {
@@ -13119,13 +13123,14 @@ nav .navbar-nav .nav-link {
   color: #212529;
   font-size: 20px;
   font-weight: 500;
+  padding: 0.2rem;
   text-transform: capitalize;
   border-bottom: 4px solid transparent;
   transition: all 0.7s;
 }
 @media (max-width: 1400px) {
   nav .navbar-nav .nav-link {
-    margin-right: 1rem;
+    margin-right: 1.2rem;
   }
 }
 nav .navbar-nav .nav-link:hover {
@@ -13133,7 +13138,7 @@ nav .navbar-nav .nav-link:hover {
 }
 @media (max-width: 1400px) {
   nav .navbar-nav .nav-link {
-    font-size: 15px;
+    font-size: 19px;
   }
 }
 @media (max-width: 1200px) {
@@ -13147,18 +13152,19 @@ nav .nav-cta-div .nav-cta {
   justify-content: center;
   background-color: #599e55;
   height: auto;
+  line-height: 1rem;
   min-width: 15rem;
   padding: 1rem 0;
   border-radius: 4px;
   color: #fcfef7;
   font-weight: 600;
-  transition: all 0.4s;
+  transition: none !important;
 }
 nav .nav-cta-div .nav-cta:hover {
-  color: #599e55;
-  background-color: transparent;
-  border: 2px solid #599e55;
-  transform: scale(1.01);
+  color: #fff;
+  background: linear-gradient(0deg, rgba(62,115,59,1) 0%, rgba(89,158,85,1) 100%);
+  text-shadow: 0 0 5px #3e733b;
+  border: none;
 }
 @media (min-width: 1200px) {
   nav .nav-cta-div .nav-cta {
@@ -13200,8 +13206,7 @@ nav .nav-cta-div .nav-cta:hover {
   background-size: 200%;
   background-position: 200%;
   background-repeat: no-repeat;
-  transition: 0.3s ease-in-out;
-  transition-property: background-position, border, color;
+  transition: none !important;
   position: relative;
 }
 .primary-button:hover {
@@ -13217,7 +13222,7 @@ nav .nav-cta-div .nav-cta:hover {
   height: 0.2rem;
   top: -1px;
   left: -1px;
-  transition: background-color 0.15s ease-in-out;
+  transition: none !important;
 }
 .primary-button:hover:before {
   background-color: white;
@@ -13233,7 +13238,7 @@ nav .nav-cta-div .nav-cta:hover {
   height: 0.2rem;
   bottom: -1px;
   right: -1px;
-  transition: background-color 0.15s ease-in-out;
+  transition: none;
 }
 
 .button-borders {
@@ -13651,7 +13656,7 @@ nav .nav-cta-div .nav-cta:hover {
   position: absolute;
   content: "";
   background: rgb(28, 1, 1);
-  background: linear-gradient(180deg, rgba(1, 20, 4, 0.96) 1%, rgba(0, 0, 0, 0.6952030812) 48%);
+  background: linear-gradient(180deg, rgba(5, 9, 15, 0.35) 1%, rgba(5, 9, 15, 0.8) 48%);
   width: 100%;
   height: 100%;
   top: 0;
@@ -13663,12 +13668,12 @@ nav .nav-cta-div .nav-cta:hover {
   width: 60%;
   border-radius: 8px;
   margin: 0 auto;
-  background: rgba(160, 160, 160, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(160, 160, 160, 0.37);
+  background: linear-gradient(0deg, rgba(160,160,160,0.38) 0%, rgba(180,180,180,0.38) 100%);
+  box-shadow: 0 8px 32px 0 #0c1626;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 10px;
-  border: 1px solid rgba(122, 122, 122, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.38);
 }
 .nav-hero .hero form label {
   font-weight: 600;
@@ -13724,11 +13729,11 @@ nav .nav-cta-div .nav-cta:hover {
   margin: 0 auto;
   padding: 0 4rem !important;
   z-index: 2;
-  background-color: #599e55;
+  background-color: #111f35;
   position: relative;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-bottom: 2rem;
-  border-radius: 8px;
+  border-radius: 8px 8px  0 0;
   overflow: hidden;
   margin-top: -40px;
 }
@@ -13760,7 +13765,7 @@ nav .nav-cta-div .nav-cta:hover {
   padding-right: 1rem;
 }
 .features .feature:nth-of-type(1) {
-  background-color: #599e55;
+  background-color: #111f35;
   color: #fcfef7;
 }
 .features .feature:nth-of-type(2) {
@@ -13770,7 +13775,7 @@ nav .nav-cta-div .nav-cta:hover {
   color: #ffffff;
 }
 .features .feature:nth-of-type(3) {
-  background-color: #599e55;
+  background-color: #111f35;
 }
 .features .feature:nth-of-type(3) .info {
   color: #fcfef7;
@@ -16950,4 +16955,36 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+.form-legal-agreement {
+	font-size:11px;width:60%;margin:0 auto;text-align: center;color:#f8f8f8;
+}
+@screen and (max-width: 1080px) {
+	.form-legal-agreement {
+		width: auto;
+	}
+}
+.unique-container {
+	max-width: 60%;
+	width: 100%;
+}
+
+div.unique-container {
+	text-align: right;
+	margin: -90px auto 0 auto;
+}
+p.unique-container {
+	text-align: left !important;
+}
+@media (max-width: 768px) {
+	.unique-container {
+		max-width: 100%;
+	}
+}
+.unique-container img {
+	position: relative;
+	max-width: 140px;
+	margin-bottom: -50px;
+	z-index:99;
+	filter: drop-shadow(0 0.4rem 0.5rem rgba(0,0,0,0.72));
 }
