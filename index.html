@@ -26,6 +26,26 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
+	
+	<script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6">
+    </script>
+    <style>
+      body {
+        padding: 25px;
+        background-color: #f0f1f3;
+        font-family: "Arial", sans-serif;
+      }
+
+      #place-picker-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #place-picker-container {
+        text-align: left;
+      }
+    </style>
 </head>
 
 <body>
@@ -126,12 +146,23 @@
 					<img src="img/sell-my-house-fast.png" alt="Sell My House Fast to Local Real Estate Investors." />
 				</div>
 	
+	
+	
                 <form action="cash-offer.php" method="post">
                     <div class="mb-3">
                         <label for="location" class="form-label">Home/Property Address <span
                                 class="text-danger">*</span></label>
-                        <input type="text" id="location" class="form-control" placeholder="Enter a location"
-                            aria-describedby="location">
+                        <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
+                            aria-describedby="location"> -->
+							
+	<gmpx-api-loader key="AIzaSyBEfPpHqEihgoU93cWX74GUJM6_IWqxoPg" solution-channel="GMP_GE_placepicker_v1">
+    </gmpx-api-loader>
+    <div id="place-picker-box">
+      <div id="place-picker-container">
+        <gmpx-place-picker placeholder="Enter an address"></gmpx-place-picker>
+      </div>
+    </div>
+	
                     </div>
 
 
