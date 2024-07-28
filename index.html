@@ -306,6 +306,25 @@
 
 
     <script src="js/index.js"></script>
+	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEfPpHqEihgoU93cWX74GUJM6_IWqxoPg&loading=async&libraries=places&callback=initMap"></script>
+	<script type="text/javascript">
+		const center = { lat: 32.705002, lng: -97.122780 };
+		// Create a bounding box with sides ~10km away from the center point
+		const defaultBounds = {
+		  north: center.lat + 2.2,
+		  south: center.lat - 2.2,
+		  east: center.lng + 2.2,
+		  west: center.lng - 2.2,
+		};
+		const input = document.getElementById("location");
+		const options = {
+		  bounds: false,
+		  componentRestrictions: { country: "us" },
+		  fields: ["address_components", "geometry", "icon", "name"],
+		  strictBounds: false,
+		};
+		const autocomplete = new google.maps.places.Autocomplete(input, options);
+	</script>
 </body>
 
 </html>
