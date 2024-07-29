@@ -22,26 +22,26 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="img/site.webmanifest">
-	
-	<script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+
+    <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6">
     </script>
     <style>
+        #place-picker-box {
+            width: 100%;
+        }
 
-      #place-picker-box {
-		width:100%;
-      }
+        #place-picker-container {
+            text-align: left;
+            width: 100%;
+        }
 
-      #place-picker-container {
-        text-align: left;
-		width: 100%;
-      }
-	  #place-picker-container > * {
-	  width: 100%;
-	  }
+        #place-picker-container>* {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -52,7 +52,7 @@
             <div class="container">
                 <div class="d-flex justify-content-center">
                     <a title="phone number" href="tel:+18325555555">
-                        Call/Text to Get a Cash Offer for Your Texas Home 
+                        Call/Text to Get a Cash Offer for Your Texas Home
                         <span class="fw-600 d-sm-inline d-block text-center">
                             (832) 555-5555
                         </span>
@@ -64,7 +64,7 @@
         <nav class="navbar navbar-expand-xl navbar-dark">
             <div class="container">
                 <div class="logo-section">
-                    <a href="index.html"><img class="logo" src="img/logo.png" alt="DFW Cash 4 Homes Logo Image"></a>
+                    <a href="index.html"><img class="logo" src="/img/logo.png" alt="DFW Cash 4 Homes Logo Image"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
@@ -76,7 +76,7 @@
                     aria-labelledby="offcanvasResponsiveLabel">
                     <div class="offcanvas-header">
                         <div class="logo-section mb-0 d-xl-none d-inline">
-                            <a href="index.html"><img class="logo" src="img/logo.png" alt="Canvas Logo"></a>
+                            <a href="index.html"><img class="logo" src="/img/logo.png" alt="Canvas Logo"></a>
                         </div>
 
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -106,7 +106,7 @@
                                 </li>
 
                                 <div class="nav-cta-div d-xl-none d-inline mt-3">
-                                    <a title="Call Now" class="nav-cta fs-17 text-uppercase" href="contact.html">
+                                    <a title="Call Now" class="nav-cta fs-17 text-uppercase" href="/contact.html">
                                         Get Your CASH Offer
                                     </a>
 
@@ -120,7 +120,7 @@
                     </ul>
                 </div>
                 <div class="nav-cta-div d-xl-inline d-none">
-                    <a title="Call Now" class="nav-cta fs-17 text-uppercase" href="contact.html">
+                    <a title="Call Now" class="nav-cta fs-17 text-uppercase" href="/contact.html">
                         Get Your CASH Offer &nbsp; <i class="fa-solid fa-chevron-right"></i>
                     </a>
                 </div>
@@ -129,37 +129,41 @@
             </div>
         </nav>
 
-        <div class="hero" data-aos="zoom-in">
+        <div class="hero" >
             <div class="container hero-content">
                 <h1 class="text-center">
-                    Sell Your House Fast in Dallas-Fort Worth<span style="font-size:0.57em;line-height:1.2em;margin:0.6em 0 2em 0;display:block;">Any Condition. No Repairs, Inspections or Commissions.</span>
+                    Sell Your House Fast in Dallas-Fort Worth<span
+                        style="font-size:0.57em;margin:0.5em 0 0.5em 0;display:block;">Any Condition. No
+                        Repairs, Inspections or Commissions.</span>
                 </h1>
-				
-				<p class="hero-info unique-container">
-					Local Investors providing Fair Cash Offers for Texas Homes!
-				</p>
-				
-				<div class="unique-container">
-					<img src="img/sell-my-house-fast.png" alt="Sell My House Fast to Local Real Estate Investors." />
-				</div>
-	
-	
-	
+
+                <p class="hero-info unique-container">
+                    Local Investors providing Fair Cash Offers for Texas Homes!
+                </p>
+
+                <div class="logo-form">
+                    <img src="/img/sell-my-house-fast.png" alt="Sell My House Fast to Local Real Estate Investors." />
+                </div>
+
+
+
                 <form action="cash-offer.php" method="post">
                     <div class="mb-3">
                         <label for="location" class="form-label">Home/Property Address <span
                                 class="text-danger">*</span></label>
                         <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
                             aria-describedby="location"> -->
-							
-	<gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0" solution-channel="GMP_GE_placepicker_v1">
-    </gmpx-api-loader>
-    <div id="place-picker-box">
-      <div id="place-picker-container">
-        <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
-      </div>
-    </div>
-	
+
+                        <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
+                            solution-channel="GMP_GE_placepicker_v1">
+                        </gmpx-api-loader>
+                        <div id="place-picker-box">
+                            <div id="place-picker-container">
+                                <gmpx-place-picker placeholder="Enter an address"
+                                    autocomplete="off"></gmpx-place-picker>
+                            </div>
+                        </div>
+
                     </div>
 
 
@@ -178,21 +182,25 @@
                     </div>
                     <p class="fs-14 text-white mb-4">
                         No fees or commissions. Put more cash in your pocket. Receive a fair offer and pick your
-                        preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all closing costs!
+                        preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all
+                        closing costs!
                     </p>
                     <button class="btn btn-primary btn-form w-100 text-capitalize">
                         Get my cash offer
                     </button>
                 </form>
-				
-                    <p class="text-white mt-4 form-legal-agreement">By clicking Get My Cash Offer, you agree to receive calls and texts, including by autodialer, prerecorded messages, and artificial voice, and email from Sell My House Fast or one of its partners but not as a condition of any purchase, and you agree to the Terms of Use and Privacy Policy.
-                    </p>
-					
+
+                <p class="text-white mt-4 form-legal-agreement">By clicking Get My Cash Offer, you agree to receive
+                    calls and texts, including by autodialer, prerecorded messages, and artificial voice, and email from
+                    Sell My House Fast or one of its partners but not as a condition of any purchase, and you agree to
+                    the Terms of Use and Privacy Policy.
+                </p>
+
             </div>
-            <video autoplay loop muted playsinline>
+            <!-- <video autoplay loop muted playsinline>
                 <source src="videos/aerial-city-view.mp4" type="video/mp4">
-            </video>
-            <img class="hero-img" src="img/hero-bg.jpg" alt="Hero background Image">
+            </video> -->
+            <img class="hero-img" src="/img/hero-bg.jpg" alt="Hero background Image">
         </div>
     </section>
 
@@ -236,7 +244,8 @@
                         DFW Cash 4 Homes
                     </p>
                     <h3 class="header">
-                        Say GOODBYE to the STRESS and HEADACHE of selling your house in North Texas - We Pay Cash For Homes.
+                        Say GOODBYE to the STRESS and HEADACHE of selling your house in North Texas - We Pay Cash For
+                        Homes.
                     </h3>
                     <p class="mb-4">
                         Selling your home in North Texas can be stressful. You might spend time and money on cleaning
@@ -257,7 +266,7 @@
                     </ul>
                     <div class="d-flex gap-3 flex-wrap">
                         <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
-                            href="contact.html">
+                            href="/contact.html">
                             Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
                         </a>
 
@@ -267,7 +276,7 @@
                     </div>
                 </div>
                 <div class="img-div">
-                    <img src="img/women-shaking-hands.jpg" alt="DFW Cash 4 Homes">
+                    <img src="/img/women-shaking-hands.jpg" alt="DFW Cash 4 Homes">
                 </div>
             </div>
         </div>
@@ -318,15 +327,909 @@
             </div>
 
             <div class="d-flex mt-5">
-                <a class="btn btn-primary rounded-pill px-5 fs-20 mx-auto" title="Call Now" href="contact.html">
+                <a class="btn btn-primary rounded-pill px-5 fs-20 mx-auto" title="Call Now" href="/contact.html">
                     Get Started
                 </a>
             </div>
         </div>
     </section>
 
+    <section class="cta-form">
+        <img class="bg-img" src="/img/family-new-house.jpg" alt="Dummy House">
+        <div class="container">
+            <h3 class="header text-center text-white">
+                Get a Fair Cash Offer for Your Home Today
+            </h3>
+            <form action="cash-offer.php" method="post">
+                <div class="mb-3">
+                    <label for="location" class="form-label">Home/Property Address <span
+                            class="text-danger">*</span></label>
+                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
+                aria-describedby="location"> -->
+
+                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
+                        solution-channel="GMP_GE_placepicker_v1">
+                    </gmpx-api-loader>
+                    <div id="place-picker-box">
+                        <div id="place-picker-container">
+                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
+                        </div>
+                    </div>
+
+                </div>
 
 
+                <div class="flex gap-2 ">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
+                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                            aria-describedby="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                            aria-describedby="email">
+                    </div>
+                </div>
+                <p class="fs-14 text-white mb-4">
+                    No fees or commissions. Put more cash in your pocket. Receive a fair offer and pick your
+                    preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all
+                    closing costs!
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                        href="/contact.html">
+                        Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                        href="tel:+18325555555">Call
+                        Now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex flex-row-reverse align-items-center">
+                <div class="info-div">
+                    <p class="sub-header">
+                        Struggling to Sell Your House Quickly in North Texas?
+                    </p>
+                    <h3 class="header">
+                        We Offer a Fast and Hassle-Free Solution to Sell Your House for Cash
+                    </h3>
+                    <p class="mb-4">
+                        Are you struggling to sell your house quickly in North Texas? Traditional home sales can be
+                        slow, stressful, and costly. At DFW Cash 4 Homes, we offer a fast and hassle-free solution to
+                        sell your house for cash, without the usual headaches.
+                    </p>
+
+                    <ul class="mb-4" style="grid-template-columns: repeat(1, 1fr);">
+                        <li>Quick Sales</li>
+                        <li>No Repairs Needed</li>
+                        <li>No fees or commissions</li>
+                        <li>Local Expertise</li>
+                    </ul>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/handshake-dummy-house.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services -->
+    <section class="services-list services-list-dark">
+        <img class="bg-img" src="/img/giving-dummy-house.jpg" alt="Dummy House">
+        <div class="container">
+            <h3 class="header text-center mb-2">
+                Why Sell Your House Fast in DFW?
+            </h3>
+            <p class="fs-18 text-center mb-5">
+                Failing to Sell Your Home Can Lead to Mounting Problems and Missed Opportunities
+            </p>
+            <div class="flex">
+                <div class="service">
+                    <div class="alphabet-div">
+                        <p>1</p>
+                    </div>
+                    <div class="icon-div">
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    </div>
+                    <h4 class="service-header">Rising Costs</h4>
+                    <p class="service-info">
+                        Ongoing maintenance, property taxes, and utility bills can quickly add up, draining your
+                        finances month after month.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="alphabet-div">
+                        <p>2</p>
+                    </div>
+                    <div class="icon-div">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4 class="service-header">Increased Stress</h4>
+                    <p class="service-info">
+                        The uncertainty and frustration of waiting for a buyer can be mentally exhausting, taking a toll
+                        on your well-being and peace of mind.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="alphabet-div">
+                        <p>3</p>
+                    </div>
+                    <div class="icon-div">
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+                    </div>
+                    <h4 class="service-header">Property Deterioration</h4>
+                    <p class="service-info">
+                        A vacant or unsold home can suffer from neglect, leading to damage and loss of value over time,
+                        making it even harder to sell.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="alphabet-div">
+                        <p>4</p>
+                    </div>
+                    <div class="icon-div">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h4 class="service-header">Missed Opportunities</h4>
+                    <p class="service-info">
+                        Delaying the sale of your house could mean missing out on other opportunities, such investing in
+                        a different property.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-3 my-4 w-100">
+                <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                    href="/contact.html">
+                    Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                    href="tel:+18325555555">Call
+                    Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex flex-row-reverse align-items-center">
+                <div class="info-div">
+                    <p class="sub-header">
+                        Why Traditional Home Selling Methods Fall Short
+                    </p>
+                    <h3 class="header">
+                        Discover Why Other Selling Options May Not Be the Best Fit for You
+                    </h3>
+                    <p class="mb-4">
+                        When it comes to selling your house in North Texas, you have several options. However, not all
+                        of them are created equal. Discover why traditional real estate agents, DIY selling, online
+                        listings and auctions, and investor scams may not be the best fit for you.
+                    </p>
+
+                    <ul class="mb-4" style="grid-template-columns: repeat(1, 1fr);">
+                        <li>Traditional Real Estate Agents</li>
+                        <li>DIY Selling</li>
+                        <li>Online Listings and Auctions</li>
+                        <li>Investor Scams</li>
+                    </ul>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/tensed.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class='why-us mb-0'>
+        <div class='container'>
+            <div class='flex'>
+                <div class='info-div'>
+                    <p class='sub-header text-primary fs-22 fw-600'>
+                        DFW Cash 4 Homes
+                    </p>
+                    <h3 class='header'>Get a Fair Cash Offer and Close on Your Schedule</h3>
+                    <p class="fs-18">
+                        At DFW Cash 4 Homes, we understand the challenges of selling your house in North Texas. That’s
+                        why we offer a fast, hassle-free solution to get cash for your home. We buy houses in any
+                        condition, so you don’t have to worry about repairs or cleanups.
+                    </p>
+
+                    <div class='features-point'>
+                        <div class='feature'>
+                            <i class="fa-solid fa-handshake"></i>
+                            <p>Fair Cash Offers</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            <p>No Repairs Needed</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-sack-dollar"></i>
+
+                            <p>No Fees or Commissions</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-forward"></i>
+
+                            <p>Fast and Flexible Closings</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class='img-div'>
+                    <img src='/img/giving-keys.jpg' alt='Giving Keys' />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-form">
+        <img class="bg-img" src="/img/family-new-house.jpg" alt="Dummy House">
+        <div class="container">
+            <h3 class="header text-center text-white">
+                Get a Fair Cash Offer for Your Home Today
+            </h3>
+            <form action="cash-offer.php" method="post">
+                <div class="mb-3">
+                    <label for="location" class="form-label">Home/Property Address <span
+                            class="text-danger">*</span></label>
+                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
+                aria-describedby="location"> -->
+
+                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
+                        solution-channel="GMP_GE_placepicker_v1">
+                    </gmpx-api-loader>
+                    <div id="place-picker-box">
+                        <div id="place-picker-container">
+                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="flex gap-2 ">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
+                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                            aria-describedby="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                            aria-describedby="email">
+                    </div>
+                </div>
+                <p class="fs-14 text-white mb-4">
+                    No fees or commissions. Put more cash in your pocket. Receive a fair offer and pick your
+                    preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all
+                    closing costs!
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                        href="/contact.html">
+                        Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                        href="tel:+18325555555">Call
+                        Now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex flex-row-reverse align-items-center">
+                <div class="info-div">
+                    <h3 class="header">
+                        Sell Your Home Quickly and Easily in the greater Dallas / Fort Worth region – No Repairs Needed
+                    </h3>
+                    <p class="mb-4">
+                        Are you struggling to sell your house in the Dallas/Fort Worth area? The conventional home
+                        selling process can be long and stressful. From waiting for the right buyer to dealing with
+                        inspections, costly repairs and financial risk, the journey can feel overwhelming and
+                        never-ending. If you need to sell your house fast, every day counts.
+                        <br><br>
+                        At DFWHomes4Cash.com, we
+                        specialize in buying homes directly for cash in the DFW metroplex. Whether your house is in
+                        perfect condition or needs repairs, we offer a straightforward, no-hassle process. We buy homes
+                        AS-IS in North Texas, including the Dallas / Fort-Worth nearby suburbs and cities. Get a fair
+                        cash offer today and close quickly on your schedule—no repairs, no fees, and no delays.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/happy-family.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex align-items-center">
+                <div class="info-div">
+                    <h3 class="header">
+                        Avoid Commissions and Fees – Sell Your House Directly for Cash in Dallas / Ft. Worth and Nearby
+                        Suburbs and Cities in North Texas.
+                    </h3>
+                    <p class="mb-4">
+                        Are high realtor commissions, unpaid real estate taxes, late mortgage payments, code violation
+                        penalties and unexpected fees preventing you from selling your house? Struggling with the
+                        complexities of listing your home? Realtor fees and hidden costs can significantly reduce your
+                        profits. On top of that, you might face additional stress from repairs and waiting periods.
+                        <br><br>
+                        Selling through a realtor often means dealing with multiple parties and prolonged negotiations,
+                        adding to your frustration. With DFWHomes4Cash.com, you can bypass these challenges. We buy
+                        houses for cash with no commissions or hidden fees, allowing you to keep more of your sale
+                        proceeds. Our process is fast and transparent—sell your house as-is, avoid all extra costs, and
+                        enjoy a seamless, quick sale.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/4-people-family-yard.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex flex-row-reverse align-items-center">
+                <div class="info-div">
+                    <h3 class="header">
+                        Your Trusted Cash Home Buyers in Dallas/Fort Worth – Fast and Fair Offers
+                    </h3>
+                    <p class="mb-4">
+                        Finding a reliable home buyer in the Dallas/Fort Worth area who understands local market
+                        conditions and can offer a fair price can be challenging. The DFW real estate market can be
+                        highly competitive and unpredictable. You might encounter delays, undervalued offers, or buyers
+                        who back out last minute. If you need a fast sale, these issues can cause significant stress and
+                        financial strain.
+                        <br><br>
+                        At DFWHomes4Cash.com, we are local experts dedicated to buying homes in
+                        Dallas, Fort Worth, and surrounding areas. We offer quick cash solutions and fair offers
+                        tailored to your local market. Experience a hassle-free sale with professionals who understand
+                        your area and can deliver swift results.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/3-people-fam-new-home.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex align-items-center">
+                <div class="info-div">
+                    <h3 class="header">
+                        Overcome Home Selling Challenges – We Buy Houses As-Is in DFW
+                    </h3>
+                    <p class="mb-4">
+                        Facing issues like mortgage balances, tenant problems, or property damage? Struggling with
+                        selling a house with these complex challenges? Issues such as outstanding mortgage balances,
+                        problematic tenants, or damage from storms can stall your home sale and create stress.
+                        Traditional buyers may be unwilling to deal with these complications, leaving you stuck.
+                        DFWHomes4Cash.com is here to help.
+                        <br><br>
+                        We buy homes in any condition and handle all sorts of
+                        challenges—from mortgage issues to property damage. Our cash offers are designed to relieve you
+                        from the burden and get you a fair deal without any hassle. Sell your house as-is and move
+                        forward with ease.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/client-meetings.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex flex-row-reverse align-items-center">
+                <div class="info-div">
+                    <h3 class="header">
+                        Get a Fast Cash Offer for Your Home in Dallas/Fort Worth – No Delays, No Hassle
+                    </h3>
+                    <p class="mb-4">
+                        Need to sell your home quickly but facing delays with traditional selling methods? Time is
+                        running out and every day feels like a setback. Whether you're dealing with a job relocation,
+                        financial pressure, or simply need to move fast, waiting for a buyer or dealing with complex
+                        selling processes can be frustrating and stressful.
+                        <br><br>
+                        The traditional home sale can take months,
+                        adding to your burden. DFWHomes4Cash.com offers a rapid solution. We provide fast cash offers
+                        for homes in the Dallas/Fort Worth area, ensuring you get the money you need without the delays.
+                        Our process is efficient and straightforward, so you can close the sale and move on with your
+                        life quickly.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/handing-keys.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-us mt-5">
+        <div class="container">
+            <div class="about-us-flex align-items-center">
+                <div class="info-div">
+                    <h3 class="header">
+                        Sell Your House Directly to a CASH HOME BUYER AS-IS – No Repair Costs, No Complications, No
+                        Closing Costs
+                    </h3>
+                    <p class="mb-4">
+                        Frustrated with realtors and the traditional home selling process? Dealing with middlemen,
+                        commissions, and endless paperwork? The traditional process involves multiple parties, high
+                        costs, and can be full of red tape. This complexity can slow down your sale and add unnecessary
+                        stress. DFWHomes4Cash.com offers a direct approach to selling your home.
+                        <br><br>
+                        Trust a local
+                        family-owned real estate investor group to purchase your property in North Texas. We provide
+                        straightforward cash offers, handle all the paperwork, and ensure a quick and easy transaction.
+                        Enjoy a simplified sale and get the cash you need without the typical hassles.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class="img-div">
+                    <img src="/img/house-sold.jpg" alt="DFW Cash 4 Homes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-form">
+        <img class="bg-img" src="/img/family-new-house.jpg" alt="Dummy House">
+        <div class="container">
+            <h3 class="header text-center text-white">
+                Get a Fair Cash Offer for Your Home Today
+            </h3>
+            <form action="cash-offer.php" method="post">
+                <div class="mb-3">
+                    <label for="location" class="form-label">Home/Property Address <span
+                            class="text-danger">*</span></label>
+                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
+                aria-describedby="location"> -->
+
+                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
+                        solution-channel="GMP_GE_placepicker_v1">
+                    </gmpx-api-loader>
+                    <div id="place-picker-box">
+                        <div id="place-picker-container">
+                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="flex gap-2 ">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
+                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                            aria-describedby="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                            aria-describedby="email">
+                    </div>
+                </div>
+                <p class="fs-14 text-white mb-4">
+                    No fees or commissions. Put more cash in your pocket. Receive a fair offer and pick your
+                    preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all
+                    closing costs!
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                        href="/contact.html">
+                        Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                        href="tel:+18325555555">Call
+                        Now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h3 class="header text-center">Frequently Asked Questions</h3>
+            <div class="accordion col-lg col-12" id="accordionExample ">
+                <div class="accordion-item">
+                    <h2 class="accordion-header accordion-topic mb-0 pb-0" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="">How can I sell my house quickly in Dallas/Fort Worth region?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-info ">
+                            <p>
+                                Selling your house quickly in Dallas/Fort Worth can be challenging, especially if you're
+                                facing issues like repairs, time constraints, or financial stress. The conventional home
+                                selling process can be long and stressful. From waiting for the right buyer to dealing
+                                with costly repairs and staging, the journey can feel overwhelming and never-ending. If
+                                you need to sell your house fast, every day counts. At DFWHomes4Cash.com, we specialize
+                                in buying homes directly for cash in the DFW metroplex. Whether your house is in perfect
+                                condition or needs repairs, we offer a straightforward, no-hassle process. Get a fair
+                                cash offer today and close on your schedule—no repairs, no fees, and no delays.
+                                <br><br>
+                                Ready for a quick cash offer? Call us today or fill out the form on our website to get
+                                started!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header accordion-topic mb-0 pb-0" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="">What if my house needs repairs before selling in DFW?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-info">
+                            <p>
+                                If your house needs repairs, it can be difficult to sell it through traditional methods,
+                                as buyers often expect move-in-ready conditions. Fixing up a home can be expensive and
+                                time-consuming, and many buyers are not interested in homes that need significant work.
+                                This often leads to extended market time and increased frustration. Realtors might
+                                advise you to make repairs before listing, which can be costly and may not guarantee a
+                                quicker sale. You could end up spending more money and still face delays.
+                                DFWHomes4Cash.com buys homes as-is, so you don’t have to worry about repairs. We make
+                                cash offers on houses in any condition, allowing you to sell quickly and move on without
+                                the hassle.
+                                <br><br>
+                                Don’t stress over repairs—get a cash offer for your home as-is today! Call us or fill
+                                out our online form to receive your offer.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header accordion-topic mb-0 pb-0" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="">How can I avoid high fees and commissions when selling my house?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-info">
+                            <p>
+                                Selling a house traditionally through a realtor involves high commissions and various
+                                fees that can reduce your overall sale profit. Realtor fees and commissions can add up
+                                to thousands of dollars, and you might also face additional costs like staging or
+                                closing fees. This can significantly impact the amount you actually receive from the
+                                sale. Traditional real estate agents may promise high returns but often take a
+                                substantial cut from your sale price in fees. You could end up with less money than
+                                anticipated after all the costs. DFWHomes4Cash.com provides a commission-free, no-fee
+                                solution. We buy houses for cash directly, ensuring you keep more of your sale proceeds
+                                without the burden of extra costs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header accordion-topic mb-0 pb-0" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span class="">Can I sell my house if it has legal issues or code violations in DFW?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-info">
+                            <p>
+                                Legal issues or code violations can complicate the sale of your house and make it
+                                difficult to find interested buyers. These problems can delay the sale and potentially
+                                lower the value of your home. Traditional buyers might be deterred by the extra work
+                                required to resolve these issues. Realtors often require homes to be in good legal
+                                standing before listing, which can be challenging and costly to address. This can result
+                                in extended market time and added stress. DFWHomes4Cash.com specializes in buying homes
+                                with legal issues or code violations. We handle these complications for you, offering a
+                                fair cash price for your home as-is.
+                                <br><br>
+                                Don’t let legal issues hold you back. Get a cash offer for your home today by calling us
+                                or filling out our online form.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header accordion-topic mb-0 pb-0" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <span class="">Where do you buy real estate in the Dallas/Fort Worth Metroplex?</span>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-info">
+                            <p>
+                                We buy homes anywhere in Texas. Finding a reliable home buyer in specific areas of the
+                                DFW metroplex can be challenging, especially if you're unsure whether they operate in
+                                your locality. Many buyers and investors focus on only a few areas, leaving homeowners
+                                in other suburbs struggling to find a buyer. This can lead to extended market time and
+                                frustration. Realtors may not cover all suburbs and cities, limiting your options and
+                                potentially prolonging the selling process. DFWHomes4Cash.com buys houses across North
+                                Texas, including Dallas/Fort Worth Metroplex, and nearby suburbs and cities like Frisco,
+                                Denton, Mesquite, Garland, Richardson, Celina, McKinny, Arlington, Plano, and Irving. No
+                                matter where your property is located in Texas, give us a call to get a cash offer.
+                                <br><br>
+                                Wherever you are in the DFW area, we’re here to help. Contact us or fill out the form
+                                for a cash offer on your property today!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                    href="/contact.html">
+                    Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                    href="tel:+18325555555">Call
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-form mb-0">
+        <img class="bg-img" src="/img/family-new-house.jpg" alt="Dummy House">
+        <div class="container">
+            <h3 class="header text-center text-white">
+                Get a Fair Cash Offer for Your Home Today
+            </h3>
+            <form action="cash-offer.php" method="post">
+                <div class="mb-3">
+                    <label for="location" class="form-label">Home/Property Address <span
+                            class="text-danger">*</span></label>
+                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
+                aria-describedby="location"> -->
+
+                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
+                        solution-channel="GMP_GE_placepicker_v1">
+                    </gmpx-api-loader>
+                    <div id="place-picker-box">
+                        <div id="place-picker-container">
+                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="flex gap-2 ">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
+                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                            aria-describedby="phone">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                            aria-describedby="email">
+                    </div>
+                </div>
+                <p class="fs-14 text-white mb-4">
+                    No fees or commissions. Put more cash in your pocket. Receive a fair offer and pick your
+                    preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all
+                    closing costs!
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                        href="/contact.html">
+                        Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                        href="tel:+18325555555">Call
+                        Now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class='why-us mb-0'>
+        <div class='container'>
+            <div class='flex'>
+                <div class='info-div'>
+                    <p class='sub-header text-primary fs-22 fw-600'>
+                        DFW Cash 4 Homes
+                    </p>
+                    <h3 class='header'>
+                        Benefits of Selling Your Home for Cash
+                    </h3>
+                    <p class="fs-18">
+                        Selling your home, unwanted inheritance or problem stricken property for cash to trusted local
+                        North Texas real estate investors comes with advantages:
+                    </p>
+
+                    <div class='features-point'>
+                        <div class='feature'>
+                            <i class="fa-solid fa-hammer"></i>
+                            <p>No Repairs Needed</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <p>No Fees or Commissions</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-forward-fast"></i>
+                            <p>Fast Closing</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-house-circle-check"></i>
+                            <p>Flexibility</p>
+                        </div>
+
+                        <div class='feature'>
+                            <i class="fa-solid fa-face-smile"></i>
+                            <p>Stress-Free Experience</p>
+                        </div>
+                    </div>
+                    <p class="fs-18 mb-4">
+                        Enjoy a smooth and efficient property sale while avoiding the usual hassles and delays.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a title="Free Medicare Consultation" class="btn btn-primary rounded-1 px-5 fs-20 fw-600"
+                            href="/contact.html">
+                            Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a title="Call Now" class="btn btn-outline-primary border-2 rounded-1 px-5 fs-20 fw-600"
+                            href="tel:+18325555555">Call
+                            Now</a>
+                    </div>
+                </div>
+                <div class='img-div'>
+                    <img src='/img/handing-keys.jpg' alt='Giving Keys' />
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
