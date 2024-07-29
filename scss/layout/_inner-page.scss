@@ -22,3 +22,39 @@
         }
     }
 }
+
+
+
+// Legal
+.legal {
+    .partition {
+        margin: 2rem 0;
+
+        .header {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .pointed-header {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        hr {
+            margin: 2rem 0 !important;
+        }
+
+        ol {
+            li {
+                font-size: 18px;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
