@@ -191,6 +191,10 @@
 
             .btn-primary.btn-form {
                 background: linear-gradient(0deg, rgba(62, 115, 59, 1) 0%, rgba(89, 158, 85, 1) 100%);
+
+                &:hover {
+                    background: linear-gradient(0deg, rgba(52, 105, 49, 1) 0%, rgba(79, 148, 75, 1) 100%);
+                }
             }
         }
 
@@ -583,6 +587,10 @@
 
         .btn-primary.btn-form {
             background: linear-gradient(0deg, rgba(62, 115, 59, 1) 0%, rgba(89, 158, 85, 1) 100%);
+
+            &:hover {
+                background: linear-gradient(0deg, rgba(52, 105, 49, 1) 0%, rgba(79, 148, 75, 1) 100%);
+            }
         }
     }
 }
@@ -996,6 +1004,7 @@
     position: relative;
     padding: 4rem 0;
     color: $white;
+
     .service {
         border: 2px solid #d8d8d8;
         background-color: $white;

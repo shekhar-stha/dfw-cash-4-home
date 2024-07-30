@@ -65,6 +65,7 @@ nav {
             height: auto;
             min-width: 15rem;
             padding: 1rem 0;
+            line-height: 1rem;
             border-radius: 4px;
             // width: fit-content;
             color: $white;
@@ -73,10 +74,10 @@ nav {
 
 
             &:hover {
-                color: $primary;
-                background-color: transparent;
-                border: 2px solid $primary;
-                transform: scale(1.01);
+                color: #fff;
+                background: linear-gradient(0deg, rgba(62,115,59,1) 0%, rgba(89,158,85,1) 100%);
+                text-shadow: 0 0 5px #3e733b;
+                border: none;
             }
 
             @media (min-width: 1200px) {

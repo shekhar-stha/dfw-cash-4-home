@@ -12862,18 +12862,16 @@ p {
 }
 
 .btn-primary {
-  color: #fcfef7;
-  font-weight: 500;
-  border: 2px solid transparent;
-  background-color: #599e55;
+  color: #fff;
+  background: linear-gradient(0deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
+  text-shadow: 0 0 5px #3e733b;
+  transition: none !important;
 }
 .btn-primary:hover {
-  color: #599e55;
-  background-color: transparent;
-  background: linear-gradient(90deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
-  border: 2px solid #3e733b;
-  transform: scale(1.01);
-  color: #fcfef7;
+  color: #fff;
+  background: linear-gradient(0deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
+  text-shadow: 0 0 5px #3e733b;
+  transition: none !important;
 }
 
 .btn-secondary {
@@ -13151,16 +13149,17 @@ nav .nav-cta-div .nav-cta {
   height: auto;
   min-width: 15rem;
   padding: 1rem 0;
+  line-height: 1rem;
   border-radius: 4px;
   color: #fcfef7;
   font-weight: 600;
   transition: all 0.4s;
 }
 nav .nav-cta-div .nav-cta:hover {
-  color: #599e55;
-  background-color: transparent;
-  border: 2px solid #599e55;
-  transform: scale(1.01);
+  color: #fff;
+  background: linear-gradient(0deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
+  text-shadow: 0 0 5px #3e733b;
+  border: none;
 }
 @media (min-width: 1200px) {
   nav .nav-cta-div .nav-cta {
@@ -13697,6 +13696,9 @@ nav .nav-cta-div .nav-cta:hover {
 .nav-hero .hero form .btn-primary.btn-form {
   background: linear-gradient(0deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
 }
+.nav-hero .hero form .btn-primary.btn-form:hover {
+  background: linear-gradient(0deg, rgb(52, 105, 49) 0%, rgb(79, 148, 75) 100%);
+}
 .nav-hero .hero .form-legal-agreement {
   font-size: 11px;
   width: 60%;
@@ -14033,6 +14035,9 @@ nav .nav-cta-div .nav-cta:hover {
 }
 .cta-form form .btn-primary.btn-form {
   background: linear-gradient(0deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
+}
+.cta-form form .btn-primary.btn-form:hover {
+  background: linear-gradient(0deg, rgb(52, 105, 49) 0%, rgb(79, 148, 75) 100%);
 }
 
 .maps .flex {
