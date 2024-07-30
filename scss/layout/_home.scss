@@ -575,6 +575,14 @@
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.38);
 
+        @media (max-width: 992px) {
+            width: 90%;
+        }
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+
         label {
             font-weight: 600;
             color: $white;
@@ -796,17 +804,16 @@
     padding: 4rem 0;
     color: $white;
 
-    ::after {
-        content: "";
+    background-color: rgba(12, 22, 38, 0.943);
+
+    .bg-img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        object-fit: cover;
         z-index: -1;
-        background: url("../img/magicpattern-mesh-gradient.png") no-repeat center center/cover;
-        filter: blur(1px) brightness(50%);
-        padding: 4rem 0 !important;
     }
 }
 
@@ -890,6 +897,35 @@
                 right: -0.9rem;
                 bottom: -0.9rem;
                 z-index: -1;
+            }
+        }
+
+        .charts {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+
+            .chart {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    margin-bottom: 1.5rem;
+                    color: $dark;
+                    text-align: center;
+                }
+
+                img {
+                    mix-blend-mode: multiply;
+                    max-width: 20rem;
+                }
+
+                ;
             }
         }
     }
@@ -1084,6 +1120,102 @@
     }
 }
 
+
+// Industries We Serve
+.locations {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .location {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 1.5rem 1.3rem;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 3rem;
+            background-color: $white;
+
+            .icon-div {
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+
+                i {
+                    color: $white;
+                    font-size: 22px;
+                }
+
+                img {
+                    width: 34px;
+                }
+            }
+
+            .icon-div-second {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                top: 8%;
+                right: 8%;
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+
+                i {
+                    color: $primary;
+                    font-size: 50px;
+                    opacity: 0.1;
+                }
+
+                img {
+                    width: 68px;
+                    filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3663%) hue-rotate(224deg) brightness(99%) contrast(92%);
+                    opacity: 0.2;
+                }
+            }
+
+            .title {
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .link {
+                font-size: 16px;
+                font-weight: 400;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: $primary;
+                color: $white;
+                width: 3rem;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top-left-radius: 50%;
+            }
+        }
+    }
+}
 
 // Ful CTA
 .full-cta {
@@ -1648,26 +1780,6 @@
     }
 }
 
-// Appointment
-.appointment {
-    form {
-        background-color: $white;
-        padding: 2rem 1.5rem;
-        border-radius: 12px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        margin: 2rem 0;
-
-        .flex {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-
-            @media (max-width: 768px) {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
-    }
-}
 
 // Before-After
 .flex {
@@ -1702,7 +1814,6 @@
 
 footer {
     .logo {
-        background-color: $primary;
         max-width: 20rem;
         width: 100%;
         border-radius: 12px;
