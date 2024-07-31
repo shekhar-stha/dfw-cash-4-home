@@ -58,3 +58,11 @@
         }
     }
 }
+
+
+.primary-overlay{
+    background: linear-gradient(0deg, rgba(89,158,85,1) 1%, rgba(70,120,67,1) 75%);
+    .header{
+        color: $white;
+    }
+}

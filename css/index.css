@@ -15806,6 +15806,13 @@ textarea::-ms-input-placeholder {
   padding-left: 1rem;
 }
 
+.primary-overlay {
+  background: linear-gradient(0deg, rgb(89, 158, 85) 1%, rgb(70, 120, 67) 75%);
+}
+.primary-overlay .header {
+  color: #fcfef7;
+}
+
 .lb-loader,
 .lightbox {
   text-align: center;
