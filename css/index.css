@@ -3266,7 +3266,7 @@ textarea.form-control-lg {
 .btn-outline-primary {
   --bs-btn-color: #599e55;
   --bs-btn-border-color: #599e55;
-  --bs-btn-hover-color: #302c2c;
+  --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #599e55;
   --bs-btn-hover-border-color: #599e55;
   --bs-btn-focus-shadow-rgb: 89, 158, 85;
@@ -14160,51 +14160,6 @@ nav .nav-cta-div .nav-cta:hover {
   margin-bottom: 0.6rem;
 }
 
-.testimonials {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 3rem 0;
-  position: relative;
-}
-.testimonials .bg-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
-}
-.testimonials .testimonial-slider .column {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 2rem 1.6rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 12px;
-  background-color: #fcfef7;
-}
-.testimonials .testimonial-slider .column .quote {
-  width: 4rem;
-}
-.testimonials .testimonial-slider .column .data {
-  margin: 1.5rem 0;
-  color: #1b1b1b;
-}
-.testimonials .testimonial-slider .column .user-info {
-  display: flex;
-  align-items: center;
-}
-.testimonials .testimonial-slider .column .user-info .user-details {
-  padding-left: 1rem;
-}
-.testimonials .testimonial-slider .column .user-info .user-details .name {
-  font-weight: 500;
-  font-size: 20px;
-  color: #182a45;
-}
-.testimonials .testimonial-slider .column .user-info .user-details .address {
-  font-size: 15px;
-}
-
 .about-us-dark {
   position: relative;
   padding: 4rem 0;
@@ -14481,6 +14436,21 @@ nav .nav-cta-div .nav-cta:hover {
 }
 .faq .accordion-button {
   background-color: #ffffff !important;
+}
+
+.testimonials .flex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.testimonials .flex .testimonial {
+  width: 100%;
+}
+.testimonials .flex .testimonial img {
+  width: 100%;
+}
+.testimonials .flex .testimonial img:hover {
+  transform: scale(1.02);
 }
 
 .locations .grid {
