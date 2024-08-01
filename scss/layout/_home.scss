@@ -874,7 +874,7 @@
         .charts {
             display: flex;
             justify-content: center;
-            margin-bottom: 2rem;
+            margin: 4rem 0;
             flex-wrap: wrap;
 
             .chart {
@@ -886,7 +886,7 @@
                 .icon-div{
                     width: 4rem;
                     height: 4rem;
-                    background-color: $white;
+                    // background-color: $white;
                     border-radius: 50%;
                     margin-bottom: 1rem;
                     display: flex;
@@ -932,8 +932,10 @@
             .yes {
                 background-color: $primary;
                 color: $white;
+                transform: scale(1.1);
 
                 .icon-div{
+                    background-color: $white;
                     i{
                         color: $primary;
                     }
