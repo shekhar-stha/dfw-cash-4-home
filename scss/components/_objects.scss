@@ -1,6 +1,12 @@
 $primary-color: $primary;
 $accent-color: #f5f5f5;
 
+.btn-outline-primary{
+  &:hover{
+    color: white;
+  }
+}
+
 .primary-button {
   font-family: 'Ropa Sans', sans-serif;
   color: white;

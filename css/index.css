@@ -13186,6 +13186,10 @@ nav .nav-cta-div .nav-cta:hover {
   }
 }
 
+.btn-outline-primary:hover {
+  color: white;
+}
+
 .primary-button {
   font-family: "Ropa Sans", sans-serif;
   color: white;
@@ -14289,27 +14293,68 @@ nav .nav-cta-div .nav-cta:hover {
 .about-us .about-us-flex .charts {
   display: flex;
   justify-content: center;
-  gap: 4rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 .about-us .about-us-flex .charts .chart {
   display: flex;
   flex-direction: column;
+  padding: 3rem;
+  width: 40%;
+}
+.about-us .about-us-flex .charts .chart .icon-div {
+  width: 4rem;
+  height: 4rem;
+  background-color: #fcfef7;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+}
+.about-us .about-us-flex .charts .chart .icon-div i {
+  font-size: 35px;
 }
 .about-us .about-us-flex .charts .chart p {
   font-weight: 600;
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
-  color: #212529;
-  text-align: center;
 }
 .about-us .about-us-flex .charts .chart img {
   mix-blend-mode: multiply;
   max-width: 20rem;
 }
-
+.about-us .about-us-flex .charts .no {
+  background-color: #45474b;
+  color: #fcfef7;
+}
+.about-us .about-us-flex .charts .no .icon-div i {
+  color: red;
+}
+.about-us .about-us-flex .charts .no li::before {
+  content: "\f057";
+  color: red;
+  font-size: 1.4rem;
+  font-family: "Font Awesome 5 Free";
+  padding: 0 6px 0 0;
+}
+.about-us .about-us-flex .charts .yes {
+  background-color: #599e55;
+  color: #fcfef7;
+}
+.about-us .about-us-flex .charts .yes .icon-div i {
+  color: #599e55;
+}
+.about-us .about-us-flex .charts .yes li::before {
+  content: "\f058";
+  color: #fcfef7;
+  font-size: 1.4rem;
+  font-family: "Font Awesome 5 Free";
+  padding: 0 6px 0 0;
+}
+.about-us .about-us-flex .charts ul {
+  grid-template-columns: repeat(1, 1fr);
+}
 .services-list {
   background-color: rgba(12, 22, 38, 0.863);
   padding: 3rem 0;
@@ -14497,9 +14542,17 @@ nav .nav-cta-div .nav-cta:hover {
   transform: scale(1.02);
 }
 
+.secondary-gradient {
+  background: linear-gradient(180deg, rgb(12, 22, 38), #182a45, rgb(12, 22, 38));
+  color: #fff;
+  margin-bottom: 0;
+  border-bottom: 1px solid #182a45;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+}
+
 .locations .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
 }
 @media (max-width: 1200px) {
@@ -14518,13 +14571,12 @@ nav .nav-cta-div .nav-cta:hover {
   }
 }
 .locations .grid .location {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 1.5rem 1.3rem;
   border-radius: 6px;
   position: relative;
   overflow: hidden;
-  padding-bottom: 3rem;
-  background-color: #fcfef7;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .locations .grid .location .icon-div {
   width: 2rem;
@@ -14534,7 +14586,6 @@ nav .nav-cta-div .nav-cta:hover {
   align-items: center;
   background-color: #599e55;
   border-radius: 50%;
-  margin-bottom: 1rem;
 }
 .locations .grid .location .icon-div i {
   color: #fcfef7;
@@ -14543,30 +14594,13 @@ nav .nav-cta-div .nav-cta:hover {
 .locations .grid .location .icon-div img {
   width: 34px;
 }
-.locations .grid .location .icon-div-second {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  top: 8%;
-  right: 8%;
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-}
-.locations .grid .location .icon-div-second i {
-  color: #599e55;
-  font-size: 50px;
-  opacity: 0.1;
-}
-.locations .grid .location .icon-div-second img {
-  width: 68px;
-  filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3663%) hue-rotate(224deg) brightness(99%) contrast(92%);
-  opacity: 0.2;
-}
 .locations .grid .location .title {
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 600;
+  margin-bottom: 0;
+}
+.locations .grid .location p {
+  display: none;
 }
 .locations .grid .location .link {
   font-size: 16px;
@@ -14582,6 +14616,7 @@ nav .nav-cta-div .nav-cta:hover {
   align-items: center;
   justify-content: center;
   border-top-left-radius: 50%;
+  display: none;
 }
 
 .full-cta {

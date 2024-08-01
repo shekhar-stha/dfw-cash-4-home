@@ -874,29 +874,85 @@
         .charts {
             display: flex;
             justify-content: center;
-            gap: 4rem;
             margin-bottom: 2rem;
             flex-wrap: wrap;
 
             .chart {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                padding: 3rem;
+                width: 40%;
+
+                .icon-div{
+                    width: 4rem;
+                    height: 4rem;
+                    background-color: $white;
+                    border-radius: 50%;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i{
+                        font-size: 35px;
+                    }
+                }
 
                 p {
                     font-weight: 600;
                     font-size: 1.6rem;
                     margin-bottom: 1.5rem;
-                    color: $dark;
-                    text-align: center;
                 }
 
                 img {
                     mix-blend-mode: multiply;
                     max-width: 20rem;
                 }
+            }
 
-                ;
+            .no {
+                background-color: #45474b;
+                color: $white;
+
+                .icon-div{
+                    i{
+                        color: red;
+                    }
+                }
+
+                li::before {
+                    content: "\f057";
+                    color: red;
+                    font-size: 1.4rem;
+                    font-family: "Font Awesome 5 Free";
+                    padding: 0 6px 0 0;
+                }
+            }
+
+            .yes {
+                background-color: $primary;
+                color: $white;
+
+                .icon-div{
+                    i{
+                        color: $primary;
+                    }
+                }
+
+                li::before {
+                    content: "\f058";
+                    color: $white;
+                    font-size: 1.4rem;
+                    font-family: "Font Awesome 5 Free";
+                    padding: 0 6px 0 0;
+                }
+            }
+
+            ul {
+                grid-template-columns: repeat(1, 1fr);
+
+                li{
+                }
             }
         }
     }
@@ -1121,11 +1177,19 @@
     }
 }
 
+.secondary-gradient {
+    background: linear-gradient(180deg, rgba(12, 22, 38, 1), #182a45, rgba(12, 22, 38, 1));
+    color: #fff;
+    margin-bottom: 0;
+    border-bottom: 1px solid #182a45;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.4);
+}
+
 // Industries We Serve
 .locations {
     .grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
 
         @media (max-width: 1200px) {
@@ -1141,13 +1205,15 @@
         }
 
         .location {
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            padding: 1.5rem 1.3rem;
+            // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             border-radius: 6px;
             position: relative;
             overflow: hidden;
-            padding-bottom: 3rem;
-            background-color: $white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            // padding-bottom: 3rem;
+            // background-color: $white;
 
             .icon-div {
                 width: 2rem;
@@ -1157,7 +1223,7 @@
                 align-items: center;
                 background-color: $primary;
                 border-radius: 50%;
-                margin-bottom: 1rem;
+                // margin-bottom: 1rem;
 
                 i {
                     color: $white;
@@ -1169,33 +1235,14 @@
                 }
             }
 
-            .icon-div-second {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                top: 8%;
-                right: 8%;
-                width: fit-content;
-                height: fit-content;
-                position: absolute;
-
-                i {
-                    color: $primary;
-                    font-size: 50px;
-                    opacity: 0.1;
-                }
-
-                img {
-                    width: 68px;
-                    filter: brightness(0) saturate(100%) invert(18%) sepia(100%) saturate(3663%) hue-rotate(224deg) brightness(99%) contrast(92%);
-                    opacity: 0.2;
-                }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                margin-bottom: 0;
             }
 
-            .title {
-                font-size: 24px;
-                font-weight: 600;
+            p{
+                display: none;
             }
 
             .link {
@@ -1212,6 +1259,8 @@
                 align-items: center;
                 justify-content: center;
                 border-top-left-radius: 50%;
+
+                display: none;
             }
         }
     }
