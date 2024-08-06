@@ -13725,6 +13725,7 @@ nav .nav-cta-div .nav-cta:hover {
 }
 .nav-hero .hero form input {
   padding: 0.5rem 1rem;
+  background-color: #fff;
 }
 .nav-hero .hero form .btn-primary.btn-form {
   background: linear-gradient(0deg, rgb(62, 115, 59) 0%, rgb(89, 158, 85) 100%);
