@@ -146,40 +146,34 @@
                             alt="Sell My House Fast to Local Real Estate Investors." />
                     </div>
 
-
-
-                    <form action="cash-offer.php" method="post">
+                    <form action="cash-offer.php" id="ctaForm" method="post">
                         <div class="mb-3">
                             <label for="location" class="form-label">Home/Property Address <span
                                     class="text-danger">*</span></label>
-                            <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
-                            aria-describedby="location"> -->
-
+                          
                             <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
                                 solution-channel="GMP_GE_placepicker_v1">
                             </gmpx-api-loader>
                             <div id="place-picker-box">
                                 <div id="place-picker-container">
-                                    <gmpx-place-picker placeholder="Enter an address"
-                                        autocomplete="off"></gmpx-place-picker>
+                                    <gmpx-place-picker placeholder="Enter an address" id="place-picker" autocomplete="off"></gmpx-place-picker>
                                 </div>
                             </div>
-
+								
                         </div>
-
-
+						<input id="hiddenInput" name="address-input" type="hidden">
                         <div class="flex gap-2 ">
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Cell Phone <span
                                         class="text-danger">*</span></label>
-                                <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
                                     aria-describedby="phone">
                             </div>
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">Your Email <span
                                         class="text-danger">*</span></label>
-                                <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email"
                                     aria-describedby="email">
                             </div>
                         </div>
@@ -188,11 +182,8 @@
                             preferred closing date. We buy real estate AS-IS throughout DFW & North Texas and cover all
                             closing costs!
                         </p>
-                        <button class="btn btn-primary btn-form w-100 text-capitalize">
-                            Get my cash offer
-                        </button>
+                        <button title="Sell my house" class="btn btn-primary rounded-1 px-5 fs-20 fw-600 w-100" type="submit">Get My CASH OFFER Now <i class="fa-solid fa-chevron-right"></i></button>
                     </form>
-
                     <p class="text-white mt-4 form-legal-agreement">By clicking Get My Cash Offer, you agree to receive
                         calls and texts, including by autodialer, prerecorded messages, and artificial voice, and email
                         from
@@ -373,17 +364,9 @@
                 <div class="mb-3">
                     <label for="location" class="form-label">Home/Property Address <span
                             class="text-danger">*</span></label>
-                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
-                aria-describedby="location"> -->
+                    <input type="text" id="location" name="address-input" class="form-control" placeholder="Enter a location" aria-describedby="location">
 
-                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
-                        solution-channel="GMP_GE_placepicker_v1">
-                    </gmpx-api-loader>
-                    <div id="place-picker-box">
-                        <div id="place-picker-container">
-                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -391,13 +374,13 @@
                 <div class="flex gap-2 ">
                     <div class="mb-3">
                         <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
-                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
                             aria-describedby="phone">
                     </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email"
                             aria-describedby="email">
                     </div>
                 </div>
@@ -718,17 +701,9 @@
                 <div class="mb-3">
                     <label for="location" class="form-label">Home/Property Address <span
                             class="text-danger">*</span></label>
-                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
-                aria-describedby="location"> -->
+                    <input type="text" id="location" name="address-input" class="form-control" placeholder="Enter a location" aria-describedby="location">
 
-                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
-                        solution-channel="GMP_GE_placepicker_v1">
-                    </gmpx-api-loader>
-                    <div id="place-picker-box">
-                        <div id="place-picker-container">
-                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -736,13 +711,13 @@
                 <div class="flex gap-2 ">
                     <div class="mb-3">
                         <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
-                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
                             aria-describedby="phone">
                     </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email"
                             aria-describedby="email">
                     </div>
                 </div>
@@ -936,13 +911,13 @@
                                 <i class="fa-regular fa-thumbs-down"></i>
                             </div>
                             <p class="title">
-                                Selling through a Realtor
+                                Selling The Old Way 
                             </p>
                             <ul>
-                                <li>Pay 6% Plus Other Fees</li>
-                                <li>Repairs Needed</li>
-                                <li>Long Closing Time</li>
-                                <li>Uncertain Sale</li>
+                                <li>Pay Expensive Fees</li>
+                                <li>Expensive Repairs Needed</li>
+                                <li>Longer Closing Time</li>
+                                <li>NO Guaranteed Closing</li>
                             </ul>
                         </div>
                         <div class="chart yes">
@@ -950,13 +925,13 @@
                                 <i class="fa-regular fa-thumbs-up"></i>
                             </div>
                             <p class="title">
-                                Selling through us
+                                Selling Quickly For Cash
                             </p>
                             <ul>
-                                <li>No Fees or Commissions</li>
-                                <li>No Repairs Needed</li>
-                                <li>Fast Closing Time</li>
-                                <li>Guaranteed Sale</li>
+                                <li>No Realtor Fees or Commissions</li>
+                                <li>We Buy AS-IS (No Repairs Needed)</li>
+                                <li>Fast Property Closing</li>
+                                <li>Trusted Local Investors</li>
                             </ul>
                         </div>
                     </div>
@@ -1223,17 +1198,9 @@
                 <div class="mb-3">
                     <label for="location" class="form-label">Home/Property Address <span
                             class="text-danger">*</span></label>
-                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
-                aria-describedby="location"> -->
+                    <input type="text" id="location" name="address-input" class="form-control" placeholder="Enter a location" aria-describedby="location">
 
-                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
-                        solution-channel="GMP_GE_placepicker_v1">
-                    </gmpx-api-loader>
-                    <div id="place-picker-box">
-                        <div id="place-picker-container">
-                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -1241,13 +1208,13 @@
                 <div class="flex gap-2 ">
                     <div class="mb-3">
                         <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
-                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
                             aria-describedby="phone">
                     </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email"
                             aria-describedby="email">
                     </div>
                 </div>
@@ -2575,17 +2542,9 @@
                 <div class="mb-3">
                     <label for="location" class="form-label">Home/Property Address <span
                             class="text-danger">*</span></label>
-                    <!-- <input type="text" id="location" class="form-control" placeholder="Enter a location"
-                aria-describedby="location"> -->
+                    <input type="text" id="location" name="address-input" class="form-control" placeholder="Enter a location" aria-describedby="location">
 
-                    <gmpx-api-loader key="AIzaSyAU4TJfLtulgcRDx_bSFt0nDsqjh316QY0"
-                        solution-channel="GMP_GE_placepicker_v1">
-                    </gmpx-api-loader>
-                    <div id="place-picker-box">
-                        <div id="place-picker-container">
-                            <gmpx-place-picker placeholder="Enter an address" autocomplete="off"></gmpx-place-picker>
-                        </div>
-                    </div>
+                    
 
                 </div>
 
@@ -2593,13 +2552,13 @@
                 <div class="flex gap-2 ">
                     <div class="mb-3">
                         <label for="phone" class="form-label">Cell Phone <span class="text-danger">*</span></label>
-                        <input type="text" id="phone" class="form-control" placeholder="Enter your phone number"
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
                             aria-describedby="phone">
                     </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your Email"
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email"
                             aria-describedby="email">
                     </div>
                 </div>

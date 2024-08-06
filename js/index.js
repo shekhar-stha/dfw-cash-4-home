@@ -1,3 +1,41 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const placePicker = document.querySelector('gmpx-place-picker');
+    const ctaForm = document.getElementById('ctaForm');
+    const hiddenInput = document.getElementById('hiddenInput');
+
+    // Access the shadow root
+    const shadowRoot = placePicker.shadowRoot;
+
+    if (shadowRoot) {
+        // Find the input element within the shadow root
+        const input = shadowRoot.querySelector('input');
+
+        if (input) {
+            input.name = 'input-address';
+        } else {
+            console.error('Input element not found within gmpx-place-picker shadow root');
+        }
+
+
+        // Input change events
+        ['click', 'change', 'keypress', 'focusout', 'focusin'].forEach(function(evt) {
+            input.addEventListener(evt, () => {
+                hiddenInput.value = input.value;
+                console.log(input.value);
+            });
+        });
+
+        // Listen for form submit
+        ctaForm.addEventListener('submit', () => {
+            hiddenInput.value = input.value;
+            console.log(input.value);
+        })
+
+    } else {
+        console.error('Shadow root not found for gmpx-place-picker');
+    }
+});
+
 /**
  * @popperjs/core v2.11.6 - MIT License
  */
