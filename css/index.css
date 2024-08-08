@@ -14508,7 +14508,7 @@ nav .nav-cta-div .nav-cta:hover {
   content: "\f0dd";
   font-size: 1.3rem;
 }
-.faq .accordion-topic span {
+.faq .accordion-topic span, .faq .accordion-topic button {
   font-weight: 600;
   font-size: 19px;
   line-height: 24px;
