@@ -15852,6 +15852,16 @@ textarea::-ms-input-placeholder {
   color: #fcfef7;
 }
 
+.page-resources {
+  padding: 3rem 0 2rem;
+}
+.page-resources .page-link, .page-resources li {
+  font-weight: 400;
+  line-height: 36px;
+  font-size: 18px;
+  text-decoration: underline !important;
+}
+
 .lb-loader,
 .lightbox {
   text-align: center;

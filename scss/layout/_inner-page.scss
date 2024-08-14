@@ -66,3 +66,14 @@
         color: $white;
     }
 }
+
+
+.page-resources{
+    padding: 3rem 0 2rem;
+    .page-link, li{
+        font-weight: 400;
+        line-height: 36px;
+        font-size: 18px;
+        text-decoration: underline !important;
+    }
+}
