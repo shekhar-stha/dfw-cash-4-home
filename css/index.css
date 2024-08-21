@@ -15862,6 +15862,31 @@ textarea::-ms-input-placeholder {
   text-decoration: underline !important;
 }
 
+.mini-resources .flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.mini-resources .flex .card {
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid #808080;
+}
+.mini-resources .flex .card .card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+.mini-resources .flex .card .info {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.mini-resources .flex .card .learn {
+  font-weight: 600;
+  text-decoration: underline !important;
+  color: #599e55;
+}
+
 .lb-loader,
 .lightbox {
   text-align: center;
